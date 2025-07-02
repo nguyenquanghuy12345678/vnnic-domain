@@ -1,24 +1,30 @@
 function Statistics() {
   return (
-    <section id="stats" className="py-12 bg-gray-100">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-semibold text-center text-gray-800 mb-8">Thống kê tên miền .vn</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 text-center">
-            <h3 className="text-lg font-medium text-gray-600">Tổng số tên miền</h3>
-            <p className="text-3xl font-bold text-blue-600">666.976</p>
+    <section id="stats" className="py-5 bg-light">
+      <div className="container">
+        <h2 className="text-center mb-4 fw-bold text-primary">Thống kê tên miền .vn</h2>
+        <div className="row g-4">
+          <div className="col-md-4">
+            <div className="card bg-primary text-white text-center p-4">
+              <h5 className="card-title">Tổng số tên miền</h5>
+              <p className="display-6 fw-bold">666.976</p>
+            </div>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 text-center">
-            <h3 className="text-lg font-medium text-gray-600">Thành viên VNIX</h3>
-            <p className="text-3xl font-bold text-blue-600">53</p>
+          <div className="col-md-4">
+            <div className="card bg-success text-white text-center p-4">
+              <h5 className="card-title">Thành viên VNIX</h5>
+              <p className="display-6 fw-bold">53</p>
+            </div>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 text-center">
-            <h3 className="text-lg font-medium text-gray-600">Băng thông VNIX</h3>
-            <p className="text-3xl font-bold text-blue-600">484 Gbps</p>
+          <div className="col-md-4">
+            <div className="card bg-info text-white text-center p-4">
+              <h5 className="card-title">Băng thông VNIX</h5>
+              <p className="display-6 fw-bold">484 Gbps</p>
+            </div>
           </div>
         </div>
-        <p className="mt-6 text-center text-gray-600">
-          Hệ thống DNS quốc gia vận hành các cụm máy chủ DNS Root (F-Root, K-Root, M-Root) tại Hà Nội, Đà Nẵng, TP.HCM, kết nối qua VNIX.
+        <p className="mt-4 text-center text-muted">
+          Hệ thống DNS quốc gia vận hành các cụm máy chủ tại Hà Nội, Đà Nẵng, TP.HCM, kết nối qua VNIX.
         </p>
       </div>
     </section>

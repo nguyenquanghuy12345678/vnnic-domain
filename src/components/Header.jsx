@@ -1,16 +1,31 @@
 function Header() {
   return (
-    <header className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-4 sticky top-0 z-50 shadow-lg">
-      <div className="container mx-auto px-4 flex justify-between items-center">
-        <h1 className="text-3xl font-bold tracking-wide">Tên miền .vn</h1>
-        <nav className="space-x-6">
-          <a href="#home" className="hover:text-yellow-300 transition duration-300">Trang chủ</a>
-          <a href="#lookup" className="hover:text-yellow-300 transition duration-300">Tra cứu</a>
-          <a href="#stats" className="hover:text-yellow-300 transition duration-300">Thống kê</a>
-          <a href="#faq" className="hover:text-yellow-300 transition duration-300">FAQ</a>
-        </nav>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div className="container-fluid">
+        <a className="navbar-brand" href="#home">
+          <span className="text-warning fw-bold">.vn</span> VNNIC Portal
+        </a>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
+              <a className="nav-link active" href="#home">Trang chủ</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#lookup">Tra cứu</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#stats">Thống kê</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#faq">FAQ</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </header>
+    </nav>
   );
 }
 

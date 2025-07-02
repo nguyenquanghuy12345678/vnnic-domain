@@ -1,10 +1,10 @@
 function Footer() {
   return (
-    <footer className="bg-gray-800 text-white py-6">
-      <div className="container mx-auto px-4 text-center">
+    <footer className="bg-dark text-white py-4">
+      <div className="container text-center">
         <p className="mb-2">© 2025 VNNIC Internet Atlas. All rights reserved.</p>
         <p>
-          Nguồn: <a href="https://internetatlas.vnnic.vn/ten-mien-vn" className="text-blue-300 hover:underline">VNNIC Internet Atlas</a>
+          Nguồn: <a href="https://internetatlas.vnnic.vn/ten-mien-vn" className="text-info text-decoration-underline">VNNIC Internet Atlas</a>
         </p>
       </div>
     </footer>

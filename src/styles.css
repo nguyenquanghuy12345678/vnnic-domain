@@ -13,3 +13,18 @@
     @apply text-shadow-md;
   }
 }
+
+/* Thêm các style tùy chỉnh để kết hợp với Bootstrap */
+.custom-bg {
+  background: linear-gradient(135deg, #007bff, #6610f2);
+}
+
+.custom-btn {
+  background-color: #ffca2c;
+  border-color: #ffca2c;
+}
+
+.custom-btn:hover {
+  background-color: #e0b11c;
+  border-color: #e0b11c;
+}

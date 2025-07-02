@@ -17,26 +17,23 @@ function DomainLookup() {
   };
 
   return (
-    <section id="lookup" className="py-12 bg-blue-50">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-semibold text-center text-blue-800 mb-6">Tra cứu tên miền .vn</h2>
-        <div className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
-          <input
-            type="text"
-            value={domain}
-            onChange={(e) => setDomain(e.target.value)}
-            placeholder="Nhập tên miền (ví dụ: example.vn)"
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-          <button
-            onClick={checkDomain}
-            className="w-full mt-4 bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition duration-300"
-          >
-            Tra cứu
-          </button>
-          <p className={`mt-4 text-center ${result.includes('lỗi') ? 'text-red-500' : 'text-green-500'}`}>
-            {result}
-          </p>
+    <section id="lookup" className="py-5 bg-light">
+      <div className="container">
+        <h2 className="text-center mb-4 fw-bold text-primary">Tra cứu tên miền .vn</h2>
+        <div className="card mx-auto" style={{ maxWidth: '400px' }}>
+          <div className="card-body">
+            <input
+              type="text"
+              value={domain}
+              onChange={(e) => setDomain(e.target.value)}
+              placeholder="Nhập tên miền (ví dụ: example.vn)"
+              className="form-control mb-3"
+            />
+            <button onClick={checkDomain} className="btn btn-primary w-100">Tra cứu ngay</button>
+            <p className={`mt-3 text-center ${result.includes('lỗi') ? 'text-danger' : 'text-success'}`}>
+              {result}
+            </p>
+          </div>
         </div>
       </div>
     </section>

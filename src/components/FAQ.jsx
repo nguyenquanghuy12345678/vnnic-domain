@@ -4,35 +4,33 @@ function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
 
   const faqs = [
-    { question: "Tên miền .vn là gì?", answer: "Tên miền .vn là tên miền quốc gia cấp cao của Việt Nam, được quản lý bởi VNNIC, đại diện cho uy tín và thương hiệu Việt." },
-    { question: "VNNIC là gì?", answer: "VNNIC (Vietnam Internet Network Information Center) là cơ quan quản lý tài nguyên Internet tại Việt Nam, bao gồm tên miền .vn và địa chỉ IP." },
-    { question: "DNS Watch là gì?", answer: "DNS Watch là công cụ của VNNIC, cho phép tra cứu trạng thái tên miền và kiểm tra quá trình phân giải DNS." },
-    { question: "VNIX là gì?", answer: "VNIX (Vietnam National Internet Exchange) là hệ thống kết nối Internet quốc gia, hỗ trợ tăng tốc độ truy cập và độ tin cậy cho tên miền .vn." }
+    { question: "Tên miền .vn là gì?", answer: "Tên miền .vn là tên miền quốc gia cấp cao của Việt Nam, do VNNIC quản lý, đại diện uy tín thương hiệu." },
+    { question: "VNNIC là gì?", answer: "VNNIC là cơ quan quản lý tài nguyên Internet tại Việt Nam, bao gồm tên miền .vn và địa chỉ IP." },
+    { question: "DNS Watch là gì?", answer: "DNS Watch là công cụ tra cứu trạng thái tên miền và phân giải DNS của VNNIC." },
+    { question: "VNIX là gì?", answer: "VNIX là hệ thống kết nối Internet quốc gia, tăng tốc độ và độ tin cậy cho tên miền .vn." }
   ];
 
-  const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   return (
-    <section id="faq" className="py-12 bg-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-semibold text-center text-blue-800 mb-8">Câu hỏi thường gặp</h2>
-        <div className="max-w-2xl mx-auto">
+    <section id="faq" className="py-5 bg-light">
+      <div className="container">
+        <h2 className="text-center mb-4 fw-bold text-primary">Câu hỏi thường gặp</h2>
+        <div className="accordion" id="faqAccordion">
           {faqs.map((faq, index) => (
-            <div key={index} className="mb-4">
-              <button
-                onClick={() => toggleFAQ(index)}
-                className="w-full text-left p-4 bg-gray-50 rounded-lg shadow-md hover:bg-gray-100 transition duration-300 flex justify-between items-center"
-              >
-                <span className="font-medium text-gray-700">{faq.question}</span>
-                <span>{openIndex === index ? '-' : '+'}</span>
-              </button>
-              {openIndex === index && (
-                <div className="p-4 bg-gray-200 rounded-b-lg">
-                  <p className="text-gray-600">{faq.answer}</p>
+            <div className="accordion-item" key={index}>
+              <h2 className="accordion-header" id={`heading${index}`}>
+                <button
+                  className={`accordion-button ${openIndex === index ? '' : 'collapsed'}`}
+                  type="button"
+                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                >
+                  {faq.question}
+                </button>
+              </h2>
+              <div className={`accordion-collapse collapse ${openIndex === index ? 'show' : ''}`} id={`collapse${index}`} aria-labelledby={`heading${index}`}>
+                <div className="accordion-body">
+                  {faq.answer}
                 </div>
-              )}
+              </div>
             </div>
           ))}
         </div>
