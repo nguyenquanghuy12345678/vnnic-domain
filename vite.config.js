@@ -3,14 +3,14 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  root: './', // Thư mục gốc là thư mục dự án (vnnic-domain)
-  publicDir: 'public', // Thư mục chứa index.html
+  root: './',
+  publicDir: 'public',
   build: {
-    outDir: 'dist', // Xuất build vào thư mục dist trong dự án
+    outDir: 'dist',
     sourcemap: false,
     rollupOptions: {
       input: {
-        main: './public/index.html', // Đường dẫn tuyệt đối từ root
+        main: './public/index.html',
       },
     },
   },
